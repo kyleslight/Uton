@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/kyleslight/Uton/issues"
   },
-  "homepage": "https://github.com/kyleslight/Uton"
+  "homepage": "https://github.com/kyleslight/Uton",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }
