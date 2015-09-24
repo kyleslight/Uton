@@ -1,0 +1,27 @@
+{
+  "name": "uton",
+  "version": "0.0.0",
+  "description": "A platform to share your systematic ideas and communicate with others",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kyleslight/Uton"
+  },
+  "keywords": [
+    "Uton",
+    "share",
+    "markdown",
+    "group",
+    "socketio",
+    "KylesLight"
+  ],
+  "author": "Kyles Light",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyleslight/Uton/issues"
+  },
+  "homepage": "https://github.com/kyleslight/Uton"
+}
