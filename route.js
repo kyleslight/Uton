@@ -1,19 +1,27 @@
+var IndexHandler = require('./handler/IndexHandler');
+var BrowseHandler = require('./handler/BrowseHandler');
+
 module.exports = function (app) {
+    var nunjucks = require('nunjucks');
+    
+    nunjucks.configure('public', {
+        autoescape: true,
+        express: app,
+        watch: true
+    });
+    
     var urlMap = {
         'get': {
-        '/': ['IndexHandler', 'getIndexPage'],
-        '/browse': ['BrowseHandler', 'getBrowsePage']
+            '/': IndexHandler.getIndexPage,
+            '/browse': BrowseHandler.getBrowsePage
         }
     };
     
     for (var method in urlMap) {
         for (var url in urlMap[method]) {
             if (urlMap[method].hasOwnProperty(url)) {
-                var handlerObject = urlMap[method][url][0];
-                var handlerFunction = urlMap[method][url][1];
-                app[method](url, require('./handler/' + handlerObject)[handlerFunction]);
+                app[method](url, urlMap[method][url]);
             }
         }
     }
-    
 };

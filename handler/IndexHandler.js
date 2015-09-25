@@ -5,7 +5,7 @@ var self = IndexHandler;
 
 // handle methods in custiom way
 IndexHandler.getIndexPage = function (req, res) {
-    res.sendFile(self.templatePath + 'index.html');
+    res.render(self.templatePath + 'index.html');
 };
 
 module.exports = IndexHandler;
