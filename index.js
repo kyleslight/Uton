@@ -2,11 +2,11 @@ var express = require('express');
 var route = require('./route');
 
 var app = express();
-app.use('/static', express.static('public/static'));
+app.use('/common', express.static(__dirname + '/public/static/common'));
 
 route(app);
 
-var server = app.listen(3000, 'localhost', function () {
+var server = app.listen(1234, 'localhost', function () {
     var host = server.address().address;
     var port = server.address().port;
     

@@ -5,6 +5,7 @@ var self = BrowseHandler;
 
 // handle methods in custiom way
 BrowseHandler.getBrowsePage = function (req, res) {
+    console.log(res.app.get('/common'));
     var books = [
             {
                 title: 'a',
