@@ -21,6 +21,7 @@ module.exports = function (app) {
         for (var url in urlMap[method]) {
             if (urlMap[method].hasOwnProperty(url)) {
                 app[method](url, urlMap[method][url]);
+                console.log('here');
             }
         }
     }
