@@ -3,6 +3,7 @@ var route = require('./route');
 
 var app = express();
 app.use('/common', express.static(__dirname + '/public/static/common'));
+app.use('/static', express.static(__dirname + '/public/static'));
 
 route(app);
 

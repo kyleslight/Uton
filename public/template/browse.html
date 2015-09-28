@@ -3,3 +3,41 @@
 {% block title %}
 <title>浏览 - 梧桐</title>
 {% endblock %}
+
+{% block extendcss %}
+<link rel="stylesheet" href="/static/browse/browse.css">
+{% endblock %}
+
+{% block navlist %}
+<li class="active"><a href="/browse">浏览</a></li>
+<li><a href="/create">创作</a></li>
+<li><a href="/group">小组</a></li>
+{% endblock %}
+
+{% block main %}
+<div class="opuses">
+    <div class="opus well row">
+        <p class="visible-sm-block visible-xs-block col-xs-12"><a href="#"><img class="avatar opsu-avatar-sm" src="/common/image/avatar/avatar1.png"></a><a href="#">kyleslight</a> 发布于 <span class="opus-create-time">2015-09-17</span> </p>
+        <div class="col-md-1 col-xs-1 hidden-sm hidden-xs">
+            <div class="opus-avatar-wrap">
+                <a href="#"><img class="avatar opsu-avatar" src="/common/image/avatar/avatar1.png"></a>
+            </div>
+        </div>
+        <div class="col-md-11 col-xs-11">
+            <a href="#"><h1 class="opus-title">浏览器的工作原理 - 现代浏览器背后的风景</h1></a>
+            <p class="hidden-sm hidden-xs attrbute-word break-item"><a href="#">kyleslight</a>  <a href="#">间歇性习得 & 介绍性文字 & 发现 - 浏览器</a>  <span class="opus-create-time">2015-09-17</span></p>
+            <p class="visible-sm-block visible-xs-block attrbute-word">来自 <a href="#">间歇性习得 & 介绍性文字 & 发现 - 浏览器</a> 中的文章</p>
+            <div>
+                （ 本文在 署名-非商业性使用-相同方式共享 3.0 版权协议下发布, 转载请注明出自 kyleslight.net ）（本文翻译自 How browsers work 并做适当修改. 翻译过程中的疏漏在所难免，如果你找到了问题希望随时通过邮件 kyleslight@outlook.com 告知 ：）1. 引论...
+            </div>
+        </div>
+    </div>
+    <div class="well row">
+        <a href="#"><h1>梯度方向与最速下降方向的关系</h1></a>
+        <p>来自 <a href="#">间歇性习得 & 介绍性文字 & 发现 - 多变量微积分</a> 中的文章</p>
+        <div>
+            （ 本文在 署名-非商业性使用-相同方式共享 3.0 版权协议下发布, 转载请注明出自 kyleslight.net ）该问题来自于Andrew Ng 的 Machine Learning Lecture 2 中一个学生的提问.按照 Ng 的说法：...
+        </div>
+    </div>
+</div>
+{% endblock %}

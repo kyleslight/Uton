@@ -3,16 +3,15 @@ var BrowseHandler = new BaseHandler();
 
 var self = BrowseHandler;
 
-// handle methods in custiom way
+// handle methods in customized way
 BrowseHandler.getBrowsePage = function (req, res) {
-    console.log(res.app.get('/common'));
     var books = [
             {
                 title: 'a',
-                discribtion: 'about a'
+                description: 'about a'
             },{
                 title: 'b',
-                discribtion: 'about b'
+                description: 'about b'
             }
         ];
     res.render(self.templatePath + 'browse.html', {books: books});
