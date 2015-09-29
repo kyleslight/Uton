@@ -1,0 +1,52 @@
+{% extends "./base.html" %}
+
+{% block title %}
+<title>{{opus.title}} - 梧桐</title>
+{% endblock %}
+
+{% block extendcss %}
+<link rel="stylesheet" href="/static/opus/opus.css">
+{% endblock %}
+
+{% block navlist %}
+<li class="active"><a href="/browse">浏览</a></li>
+<li><a href="/create">创作</a></li>
+<li><a href="/group">小组</a></li>
+{% endblock %}
+
+{% block main %}
+<div class="opus well">
+    <h1>{{opus.title}}</h1>
+    <div id="store_author_container">
+    <img src="/static/common/image/avatar/author.jpg" alt="author_img" class="author-img">
+    <span id="article_info_block">
+    <a href="/article/2" id="author_name" class="spefont" target="_blank">Kyles Light</a> ·
+    <span id="article_date" class="spefont">2015-02-12</span>
+    </span>
+    </div>
+    
+    <hr>
+    <p>（ 本文在 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank">署名-非商业性使用-相同方式共享 3.0</a> 版权协议下发布, 转载请注明出自 <a href="http://kyleslight.net/" target="_blank">kyleslight.net</a> ）</p>
+    <h2 id="resume">Resume</h2>
+    <p>长期居住在武汉的土著；工科学生党一枚；重度猫控；现在在  <a href="http://zh.wikipedia.org/zh/%E5%8D%8E%E4%B8%AD%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6" target="_blank">HUST</a>  主修工程力学（Engineering Mechanics）；在  <a href="http://zh.wikipedia.org/wiki/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6" target="_blank">WHU</a>  辅修过一段时间经济学；现在人在帝都</p>
+    <p>小时候喜欢阅读各种通史读物，比如斯塔夫里阿诺斯的  <a href="http://book.douban.com/subject/1025643/" target="_blank">《全球通史》</a> 、房龙的 <a href="http://book.douban.com/subject/1063736/" target="_blank">《人类的故事》</a>；究其原因是有一次被剑桥大学的中世纪史中关于城堡生活的插图吸引</p>
+    <p>初中时被 <a href="http://book.douban.com/subject/1507315/" target="_blank">《自然哲学之数学原理》</a>  震撼，从此开始膜拜经典物理学家并误入理工佛门</p>
+    <p>高中在一群学霸身边卑微地蠕动，听大神给我分析 <a href="http://zh.wikipedia.org/zh/%E6%9C%80%E9%80%9F%E9%99%8D%E7%B7%9A%E5%95%8F%E9%A1%8C" target="_blank">最速降线问题</a> 以及薛定谔在阿尔卑斯山上的风流韵事</p>
+    <p>高二开始看 <a href="http://zh.wikipedia.org/wiki/%E4%BA%AC%E9%83%BD%E5%8B%95%E7%95%AB" target="_blank">京阿姨</a> 的 TV 版 <a href="http://zh.wikipedia.org/zh/CLANNAD" target="_blank">Clannad</a>，从此在  ACGer  的道路上一发不可收拾</p>
+    <p>大学刚入校时加入社团 <a href="http://www.sicun.org/" target="_blank">思存工作室</a>， 从此误入前端大坑；在与一名 <a href="https://www.linkedin.com/in/pyrocat" target="_blank">看起来不是很靠谱其实很厉害的计院学长</a> 的将近一年的接触中不断增长脑洞，比如看他实现的 <a href="https://github.com/pyrocat101/snake-ai" target="_blank">贪食蛇AI</a> 、仿 Logo 语言的小型脚本语言  <a href="https://github.com/pyrocat101/LogoScript" target="_blank">LogoScript</a>  以及 <a href="http://pyroc.at/blog/2013/05/07/verlet-cloth-simulation/" target="_blank">用一个很伪的算法实现布料模拟 </a>；那段时间自己实现过单纯的在 Terminal 上运行的贪食蛇，基于OpenGL的太阳系模型以及简单的 Canvas 游戏  <a href="http://runjs.cn/code/yypqpmvz" target="_blank">Survival of the Fittest</a> ；开始了一个普通程序爱好者的折腾之路</p>
+    <p>大一暑假脑洞大开用 Unity 3D 实现了一个关于巡音的RPG恐怖向解谜游戏（未完）</p>
+    <p>大二上开始和另一个学长合作 <a href="https://github.com/loggerhead/wutong" target="_blank">梧桐</a> （一个集成文章发布以及即时讨论的平台），挖下一个大坑直到现在也没有填完</p>
+    <p>大二暑假在齐鲁证券实习，空闲时间通过 <a href="https://www.udemy.com/cs-107-programming-paradigms/" target="_blank">Programming Paradigms (CS107) </a> 跟着大叔练习颜艺与数反括号</p>
+    <p>大三开始在意自己的 GPA 与专业课并准备出国考试；对 ACG 以及其他类型的作品的喜爱退潮；知道了如何用真正的 <a href="http://zh.wikipedia.org/wiki/%E5%BC%B9%E6%80%A7%E5%8A%9B%E5%AD%A6" target="_blank">弹性力学</a> 原理（而不是伪算法）通过 Fortran 来分析现实结构的受力；经历了一段痛苦的背GRE单词时间；在这段时间通过 <a href="http://www.zhihu.com/" target="_blank">知乎</a> 认识了一群有意思的人</p>
+    <p>大三下拿到了百度与阿里的实习 offer ，目前正在狼厂实习中。</p>
+    <p>给微电影写过脚本；独立作曲与编曲；画过简单的素描；曾经幻想过一个不曾存在的世界，并为之构筑完整的世界观，撰写小说（未完，另一个天坑）；会被自己幻想的故事感动哭</p>
+    <p>一只躁动不安的生物；满脑子各种想法苦于没有时间完成</p>
+    <p>目前还在各方面修行中</p>
+    <p>理想型到现在为止依然是 <a href="http://baike.baidu.com/view/10112499.htm" target="_blank">菓子小姐</a> （其实没有名字）</p>
+    <h2 id="contact-me">Contact Me</h2>
+    <p>尽量用邮箱或者私信的方式联系我 ：）</p>
+    <p><strong>普通事务与合作</strong><br>Gmail : <a href="mailto:likelakes07@gmail.com">likelakes07@gmail.com</a><br>Outlook ： <a href="mailto:kyleslight@outlook.com">kyleslight@outlook.com</a></p>
+    <p><strong>教育与学术</strong><br>HUST Mail ：<a href="mailto:kyleslight@hust.edu.cn">kyleslight@hust.edu.cn</a></p>
+    <p><strong>社交网络</strong><br>知乎：<a href="http://www.zhihu.com/people/kyles_light" target="_blank">http://www.zhihu.com/people/kyles_light</a><br>微博：<a href="http://weibo.com/2769295577" target="_blank">http://weibo.com/2769295577</a><br>Twitter：<a href="https://twitter.com/KylesLight" target="_blank">https://twitter.com/KylesLight</a></p>
+</div>
+{% endblock %}

@@ -1,5 +1,6 @@
 var IndexHandler = require('./handler/IndexHandler');
 var BrowseHandler = require('./handler/BrowseHandler');
+var OpusHandler = require('./handler/OpusHandler');
 
 module.exports = function (app) {
     var nunjucks = require('nunjucks');
@@ -13,7 +14,8 @@ module.exports = function (app) {
     var urlMap = {
         'get': {
             '/': IndexHandler.getIndexPage,
-            '/browse': BrowseHandler.getBrowsePage
+            '/browse': BrowseHandler.getBrowsePage,
+            '/opus/:id': OpusHandler.getOpusPage
         }
     };
     
