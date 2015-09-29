@@ -17,9 +17,14 @@
                     <span class="glyphicon glyphicon-list"></span>
                 </button>
                 <a class="navbar-brand" href="/">Uton</a>
+                <form class="navbar-form navbar-left visible-xs-inline-block top-search-box-wrap">
+                    <div class="form-group pull-left top-search-box">
+                        <input type="search" class="form-control top-search-box-input" placeholder="搜索文章，小组，人">
+                    </div>
+                </form>
             </div>
         
-            <div class="collapse navbar-collapse" id="nav-links">
+            <div class="collapse navbar-collapse no-borde-top" id="nav-links">
                 <ul class="nav navbar-nav uton-nav-list">
                     {% block navlist %}
                     <li><a href="/browse">浏览</a></li>
@@ -27,11 +32,11 @@
                     <li><a href="/group">小组</a></li>
                     {% endblock %}
                 </ul>
-                <form class="navbar-form navbar-left">
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="搜索文章，小组，人">
+                <form class="navbar-form navbar-left hidden-xs">
+                    <div class="form-group pull-left">
+                        <input type="search" class="form-control search-box" placeholder="搜索文章，小组，人">
                     </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
+                    <button type="submit" class="btn btn-default search-button">搜索</button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
